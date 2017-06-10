@@ -1,3 +1,14 @@
+%Title: Introduction to MATLAB
+%Author:Rabi Raj Khadka
+%---------------------------------------------------------
+%Three Critical Statements 
+%---------------------------------------------------------
+close all;
+clear variables;
+clc;
+%---------------------------------------------------------
+%Operations
+%---------------------------------------------------------
 fprintf('Choose Options\n');
 fprintf('1.Basic Mathematical operation on Numbers\n');
 fprintf('2.Matrix Operations\n');
@@ -35,5 +46,4 @@ while logv == true
           logv = false;
     end
 end
-
-while()
+%---------------------------------------------------------

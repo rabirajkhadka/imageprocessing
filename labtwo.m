@@ -9,8 +9,7 @@ clc;
 %---------------------------------------------------------
 %Operations: Input
 %---------------------------------------------------------
-kheclogo=imread('C:\Users\rabiraj\Desktop\ImageProcessingLab\img\UCT.png');
-
+kheclogo=imread('C:\Users\rabiraj\Desktop\ImageProcessingLab\img\kheclogo.jpg');
 %---------------------------------------------------------
 %Operations: Manipulation
 %---------------------------------------------------------
@@ -25,12 +24,14 @@ negative_of_blackandwhite_kheclogo=1-im2bw(kheclogo);
 %---------------------------------------------------------
 %Operations: Output
 %---------------------------------------------------------
+%Shortcuts method to display images ;) 
 %imshow(kheclogo);
 %imshow(255-kheclogo);
 %imshow(rgb2gray(kheclogo));
 %imshow(rgb2gray(negkheclogo));
 %imshow(im2bw(kheclogo));
 %imshow(1-im2bw(kheclogo));
+%not recommended for beginners
 subplot(3,2,1);
 imshow(kheclogo);
 title('Original Image');
@@ -49,7 +50,3 @@ title('B/W of Original Image');
 subplot(3,2,6);
 imshow(negative_of_blackandwhite_kheclogo);
 title('B/W of Negative Image');
-
-
-
-

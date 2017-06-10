@@ -13,25 +13,14 @@ kheclogo=imread('C:\Users\rabiraj\Desktop\ImageProcessingLab\img\kheclogo.jpg');
 %---------------------------------------------------------
 %Operations: Manipulation
 %---------------------------------------------------------
-%negkheclogo=255-kheclogo;
-%imwrite(negkheclogo,'negativekhec.jpg');
 negative_kheclogo=255-kheclogo;
 grayscale_kheclogo=rgb2gray(kheclogo);
 grayscale_of_negative_kheclogo=rgb2gray(negative_kheclogo);
 blackandwhie_kheclogo=im2bw(kheclogo);
 negative_of_blackandwhite_kheclogo=1-im2bw(kheclogo);
-
 %---------------------------------------------------------
 %Operations: Output
 %---------------------------------------------------------
-%Shortcuts method to display images ;) 
-%imshow(kheclogo);
-%imshow(255-kheclogo);
-%imshow(rgb2gray(kheclogo));
-%imshow(rgb2gray(negkheclogo));
-%imshow(im2bw(kheclogo));
-%imshow(1-im2bw(kheclogo));
-%not recommended for beginners
 subplot(3,2,1);
 imshow(kheclogo);
 title('Original Image');

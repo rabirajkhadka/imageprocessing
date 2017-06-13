@@ -88,7 +88,7 @@ orgim=imread(path);
 orgim=im2double(orgim);
 img2=orgim;
 global activewindow
-activewindow = 'origim';
+activewindow = orgim;
 set(handles.brightnesslevel,'String','0');
 set(handles.brightness_control,'Value',1);
 axes(handles.opwindow);

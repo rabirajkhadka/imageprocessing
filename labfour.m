@@ -1,3 +1,7 @@
+%Title: GUI control elements used in Matlab.
+%Develope By: Rabi Raj Khadka
+%Date: 30/02/2074
+%-------------------------------------------------------------------
 function varargout = labfour(varargin)
 % LABFOUR MATLAB code for labfour.fig
 %      LABFOUR, by itself, creates a new LABFOUR or raises the existing
@@ -22,7 +26,7 @@ function varargout = labfour(varargin)
 
 % Edit the above text to modify the response to help labfour
 
-% Last Modified by GUIDE v2.5 13-Jun-2017 13:04:42
+% Last Modified by GUIDE v2.5 20-Jun-2017 02:43:31
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -83,16 +87,14 @@ selectedvalue=get(handles.btngroupfaculty,'SelectedObject');
 val=get(selectedvalue,'String');
 set(handles.selectedvaluestring,'String',val);
 
-satellite=get(handles.chckbxsatellite,'Value');
-opticalfibre=get(handles.chckbxopticalfibre,'Value');
-antenna=get(handles.chckbxantenna,'Value');
-filterdesign=get(handles.chckbxfilterdesign,'Value');
-dsa=get(handles.chckbxdsa,'Value');
-isd=get(handles.chckbxisd,'Value');
-ippr=get(handles.chckbxippr,'Value');
-cod=get(handles.chckbxcod,'Value');
-
-ippr;
+%satellite=get(handles.chckbxsatellite,'Value');
+%opticalfibre=get(handles.chckbxopticalfibre,'Value');
+%antenna=get(handles.chckbxantenna,'Value');
+%filterdesign=get(handles.chckbxfilterdesign,'Value');
+%dsa=get(handles.chckbxdsa,'Value');
+%isd=get(handles.chckbxisd,'Value');
+%ippr=get(handles.chckbxippr,'Value');
+%cod=get(handles.chckbxcod,'Value');
 
 switch val
     case 'Electronics' 
@@ -116,10 +118,15 @@ switch val
         set(handles.chckbxippr,'Enable','On');
         set(handles.chckbxcod,'Enable','On');
         
+        
         set(handles.chckbxfilterdesign,'Enable','Off');
         set(handles.chckbxantenna,'Enable','Off');
         set(handles.chckbxopticalfibre,'Enable','Off');
         set(handles.chckbxsatellite,'Enable','Off');
+        set(handles.chckbxsatellite,'Value',0);
+        set(handles.chckbxopticalfibre,'Value',0);
+        set(handles.chckbxantenna,'Value',0);
+        set(handles.chckbxfilterdesign,'Value',0);
 end
 
 
@@ -272,5 +279,8 @@ switch val
         set(handles.chckbxantenna,'Enable','Off');
         set(handles.chckbxopticalfibre,'Enable','Off');
         set(handles.chckbxsatellite,'Enable','Off');
+        set(handles.chckbxsatellite,'Value',0);
+        set(handles.chckbxopticalfibre,'Value',0);
+        set(handles.chckbxantenna,'Value',0);
+        set(handles.chckbxfilterdesign,'Value',0);
 end
-

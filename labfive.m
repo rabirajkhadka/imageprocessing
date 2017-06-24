@@ -1,17 +1,18 @@
-%Title: To study Image Enhancement with Specification
-%Author:Saurav Shrestha
+%Title:Image Enhancement with Histogram Equalization, Specification
+% and Streching
+%Author:Rabi Raj Khadka
 %Date:June 20, 2017
 %--------------------------------------------------------------------------
 % Three Critical Statements
 %--------------------------------------------------------------------------
 close all;
-clear variables;
+clear variables
 clc;
 %--------------------------------------------------------------------------
-%Two image Read
+%Read an Image
 %--------------------------------------------------------------------------
-myimage = imread('D:\pictures\koshi tappu\20161016_140957.jpg');
-reference = imread('D:\pictures\koshi tappu\20161016_140923.jpg');
+myimage = imread('C:\Users\rabiraj\Desktop\seventhsemester\ImageProcessingLab\img\one.jpg');
+reference = imread('C:\Users\rabiraj\Desktop\seventhsemester\ImageProcessingLab\img\two.jpg');
 %--------------------------------------------------------------------------
 %Source Image Channel Decomposition
 %--------------------------------------------------------------------------
@@ -49,45 +50,31 @@ histsp(:,:,1)=outr;
 histsp(:,:,2)=outg;
 histsp(:,:,3)=outb;
 %--------------------------------------------------------------------------
-%output  
+%Histogram Equalization and Contrast Stretching
+%--------------------------------------------------------------------------
+img_lowcontrast=imadjust(rgb2gray(myimage),[0.0,1.0],[0.3,0.6]);
+img_equalization = histeq(rgb2gray(myimage));
+%--------------------------------------------------------------------------
+%Outputs
 %--------------------------------------------------------------------------
 figure;
-subplot(1,3,1);
-imshow(myimage);
-title('Original Image');
-subplot(1,3,2);
-imshow(reference);
-title('Reference image');
-subplot(1,3,3);
-imshow(histsp);
-title('Output Image');
-
-
+subplot(2,3,1);imshow(myimage);title('Original');
+subplot(2,3,4);imhist(rgb2gray(myimage));title('original histogram');
+subplot(2,3,2);imshow(img_lowcontrast);title('lowcontrast image');
+subplot(2,3,5);imhist(img_lowcontrast);title('lowcontrast histogram');
+subplot(2,3,3);imshow(img_equalization);title('Equalized Image');
+subplot(2,3,6);imhist(img_equalization);title('Equalized histogram');
 figure;
-subplot(3,3,1);
-plot(hist_myimage_R);
-title('Red Input');
-subplot(3,3,2);
-plot(hist_myimage_G);
-title('Green Input');
-subplot(3,3,3);
-plot(hist_myimage_B);
-title('Blue Input');
-subplot(3,3,4);
-plot(hist_reference_R);
-title('Red Reference');
-subplot(3,3,5);
-plot(hist_reference_G);
-title('Green Reference');
-subplot(3,3,6);
-plot(hist_reference_B);
-title('Blue Reference');
-subplot(3,3,7);
-plot(imhist(outr));
-title('output R');
-subplot(3,3,8);
-plot(imhist(outg));
-title('output G');
-subplot(3,3,9);
-plot(imhist(outb));
-title('output B');
+subplot(1,3,1);imshow(myimage);title('Original Image');
+subplot(1,3,2);imshow(reference);title('Reference image');
+subplot(1,3,3);imshow(histsp);title('Output Image');
+figure;
+subplot(3,3,1);plot(hist_myimage_R);title('Red Input');
+subplot(3,3,2);plot(hist_myimage_G);title('Green Input');
+subplot(3,3,3);plot(hist_myimage_B);title('Blue Input');
+subplot(3,3,4);plot(hist_reference_R);title('Red Reference');
+subplot(3,3,5);plot(hist_reference_G);title('Green Reference');
+subplot(3,3,6);plot(hist_reference_B);title('Blue Reference');
+subplot(3,3,7);plot(imhist(outr));title('output R');
+subplot(3,3,8);plot(imhist(outg));title('output G');
+subplot(3,3,9);plot(imhist(outb));title('output B');

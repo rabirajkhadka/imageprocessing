@@ -9,7 +9,7 @@ clc;
 %---------------------------------------------------------
 %Operations: Input
 %---------------------------------------------------------
-kheclogo=imread('C:\Users\rabiraj\Desktop\ImageProcessingLab\img\kheclogo.jpg');
+kheclogo=imread('img\kheclogo.jpg');
 %---------------------------------------------------------
 %Operations: Manipulation
 %---------------------------------------------------------

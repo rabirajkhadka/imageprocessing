@@ -11,8 +11,8 @@ clc;
 %--------------------------------------------------------------------------
 %Read an Image
 %--------------------------------------------------------------------------
-myimage = imread('C:\Users\rabiraj\Desktop\seventhsemester\ImageProcessingLab\img\one.jpg');
-reference = imread('C:\Users\rabiraj\Desktop\seventhsemester\ImageProcessingLab\img\two.jpg');
+myimage = imread('img\one.jpg');
+reference = imread('img\two.jpg');
 %--------------------------------------------------------------------------
 %Source Image Channel Decomposition
 %--------------------------------------------------------------------------

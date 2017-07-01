@@ -10,7 +10,7 @@ clc;
 %-------------------------------------------------------------------------
 %INPUT
 %------------------------------------------------------------------------
-image=imread('C:\Users\rabiraj\Desktop\ImageProcessingLab\neuromancer.jpg');
+image=imread('img\neuromancer.jpg');
 imshow(image);
 imagedouble = im2double(image); %converting the image pixel to double value
 x = imagedouble; %declaring an output image of size as size of input image

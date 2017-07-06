@@ -17,3 +17,7 @@ codes of image processing lab done during lab periods and latex reports code.
   > * Contrast Steretching, Histogram Equalization, and Histogram Specification    
 * Lab Six:
   > * Bit Plane Slicing and Noises and its removal using Noise Filter
+* Lab Seven:
+  > * Edge Detection using built in and custom Gradient Filters
+  > * Edge Detection using built in and custom Laplace Filters
+  > * DCT and IDCT applied on image for image compression 
